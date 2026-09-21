@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>体检报告 第1轮</title>
+<style>
+:root{
+  --bg:#f6f4ef; --card:#ffffff; --ink:#1c1b18; --muted:#6b675e; --line:#e8e4dc;
+  --red:#d6453d; --amber:#d99a1e; --green:#3f9a5a; --accent:#1c1b18;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15140f; --card:#1f1e18; --ink:#f1ede4; --muted:#a39d90; --line:#2e2c24;
+    --red:#ff6b62; --amber:#f2b64a; --green:#5fc47c; --accent:#f1ede4;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15140f; --card:#1f1e18; --ink:#f1ede4; --muted:#a39d90; --line:#2e2c24;
+  --red:#ff6b62; --amber:#f2b64a; --green:#5fc47c; --accent:#f1ede4;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif;font-size:17px;line-height:1.55}
+.wrap{max-width:480px;margin:0 auto;padding:24px 16px 48px}
+.top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.top h1{font-size:15px;font-weight:500;color:var(--muted);margin:0;letter-spacing:1px}
+.top span{font-size:13px;color:var(--muted)}
+.verdict{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 20px;margin-bottom:14px}
+.verdict .tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px}
+.verdict p{margin:0;font-size:22px;font-weight:600;line-height:1.4}
+.verdict small{display:block;margin-top:10px;color:var(--muted);font-size:14px}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.num{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 6px;text-align:center}
+.num b{display:block;font-size:20px;font-weight:600}
+.num i{font-style:normal;font-size:12px;color:var(--muted)}
+h2{font-size:13px;font-weight:600;letter-spacing:2px;color:var(--muted);margin:22px 4px 10px}
+.item{display:flex;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:8px}
+.dot{flex:none;width:10px;height:10px;border-radius:50%;margin-top:9px}
+.r{background:var(--red)} .a{background:var(--amber)} .g{background:var(--green)}
+.item p{margin:0}
+.item small{display:block;color:var(--muted);font-size:14px;margin-top:2px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:0 16px;margin-bottom:8px}
+summary{padding:14px 0;cursor:pointer;font-size:15px;color:var(--muted);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"＋";float:right}
+details[open] summary::after{content:"－"}
+details p{margin:0 0 14px;font-size:15px;color:var(--ink)}
+.do{background:var(--accent);color:var(--bg);border-radius:18px;padding:20px;margin-top:10px}
+.do .k{font-size:12px;letter-spacing:2px;opacity:.7;margin-bottom:6px}
+.do p{margin:0;font-size:18px;font-weight:600;line-height:1.45}
+.do p+p{margin-top:12px;font-weight:400;font-size:15px;opacity:.85}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><h1>体检 · 第 1 轮</h1><span>9/21 · 湾区中秋帖</span></div>
+
+  <div class="verdict">
+    <span class="tag">● 没进推荐池</span>
+    <p>不是薯条没用，是这条压根没被自然分发。</p>
+    <small>141 低于 200 的初始池，薯条买的量顶不上去。</small>
+  </div>
+
+  <div class="nums">
+    <div class="num"><b>141</b><i>观看</i></div>
+    <div class="num"><b>1</b><i>赞</i></div>
+    <div class="num"><b>4</b><i>分享</i></div>
+    <div class="num"><b>0</b><i>评论</i></div>
+  </div>
+
+  <h2>问题</h2>
+  <div class="item"><span class="dot r"></span><div><p>号是猫号，帖子是活动帖</p><small>平台把它推给了看猫的人</small></div></div>
+  <div class="item"><span class="dot a"></span><div><p>封面大字和标题一样</p><small>我的锅，下一条改</small></div></div>
+  <div class="item"><span class="dot a"></span><div><p>22:56 发，黄金两小时没人在线</p><small>活动帖周日晚 7–9 点发</small></div></div>
+  <div class="item"><span class="dot g"></span><div><p>违规词、标题、tag 都干净</p><small>4 个分享说明内容有人想转</small></div></div>
+
+  <h2>想看细节再点</h2>
+  <details><summary>为什么说没进推荐池</summary><p>初始池是 200–500 个曝光，帖子过了机器初审才给。141 说明要么审核卡了（活动帖 + 最后一张价格图容易判成商业招募），要么初始池给了错的人群。四步排查做完才知道是哪种。</p></details>
+  <details><summary>猫号的问题到底是什么</summary><p>8.8 万那条是猫，平台标签就钉在宠物上，粉丝也大半是看猫的。发活动、发车行，每一条都在跟标签打架，初始池天然小。三个方向只能留一个，另外两个开小号。</p></details>
+  <details><summary>薯条为什么在北美没用</summary><p>投放人群主要在国内，投出去的人看了不点，反而把点击率拉低，影响后面的自然推荐。北美先别投。</p></details>
+
+  <div class="do">
+    <div class="k">今天只做一件事</div>
+    <p>去评论区自己留一条：「今年中秋周五，有多少人是一个人过的？」</p>
+    <p>别改帖子、别删、别再投。</p>
+  </div>
+
+  <div class="do" style="background:var(--card);color:var(--ink);border:1px solid var(--line)">
+    <div class="k">下次给我什么</div>
+    <p>① 搜标题搜不搜得到 ② #湾区中秋 页里有没有 ③ 薯条页有没有提示</p>
+    <p>加明晚满 48 小时的数据页截图。还有：这个号做猫、车行还是活动？</p>
+  </div>
+</div>
+</body>
+</html>
